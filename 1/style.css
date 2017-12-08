@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 100px);
+}
+
+header, footer{
+    background-color: black;
+    height: 50px;
+    color: white;
+}
+
+nav{
+    width: 20%;
+    background-color: grey;
+    order: 1;
+}
+
+aside{
+    width: 20%;
+    background-color: grey;
+    order: 3;
+}
+
+main{
+    width: 80%;
+    background-color: wheat;
+    order: 2;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    aside, nav, main {
+        width: 100%;
+    }
+
+    aside, nav{
+        flex-basis: 10%;
+    }
+
+    main{
+        flex-basis: 80%;
+    }
+}
